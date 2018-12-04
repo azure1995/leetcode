@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -10,12 +11,10 @@ import java.util.TreeSet;
 public class test {
 
     public static void main(String[] args) {
-        SortedSet<Integer> ss = new TreeSet<>();
-        ss.add(5);
-        ss.add(2);
-        ss.add(6);
-        List<Integer> list = new ArrayList<>(ss);
-        System.out.println(list.get(0));
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> a < b ? 1 : -1);
+        pq.offer(1);
+        pq.offer(2);
+        System.out.println(pq.remove());
     }
 }
 
