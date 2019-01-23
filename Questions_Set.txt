@@ -1,0 +1,19 @@
+1.DOTA Maximizer:
+You are a DOTA player. You want to win without accidence. Here is a problem you may
+want to solve.
+Let's assume:
+    (1). Money unit in DOTA is D, just like $ in North America;
+    (2). Price of equipment: 100*POWER(2, i)D, i = 0, 1, 2, ...;
+    (3). Yield: POWER(4, i)D/minute, i = 0, 1, 2, ....
+
+Rules are:
+    (1). You can only get half of the initial price of money back by selling a equipment. You 
+    cannot get money back if the initial price is 1. 
+    (2). All transaction must happen at integral minute.
+
+Q1: Given the money you have initially. Please calculate the yield rate. You are not allowed 
+to change equiments during the game. 
+Q2: Initially you have 625D. You are allowed to buy new equipments as well as sell existing
+equiments. Please calculate the maximized total assets = money left + Sum(initial price each
+equipment) when the game ends. 
+Q3: Follow Q2, what if there's a upper limit (e.g. 6) of the equipments you could hold.
