@@ -1,33 +1,31 @@
-/*
- * @lc app=leetcode id=132 lang=java
- *
- * [132] Palindrome Partitioning II
- *
- * https://leetcode.com/problems/palindrome-partitioning-ii/description/
- *
- * algorithms
- * Hard (26.17%)
- * Total Accepted:    92.9K
- * Total Submissions: 354.9K
- * Testcase Example:  '"aab"'
- *
- * Given a string s, partition s such that every substring of the partition is
- * a palindrome.
- * 
- * Return the minimum cuts needed for a palindrome partitioning of s.
- * 
- * Example:
- * 
- * 
- * Input: "aab"
- * Output: 1
- * Explanation: The palindrome partitioning ["aa","b"] could be produced using
- * 1 cut.
- * 
- * 
- */
 class Solution {
     public int minCut(String s) {
-        
+        char[] chArr = s.toCharArray();
+        int N = s.length();
+        boolean[][] dp = new boolean[N][N];
+        for (int i = 0; i < N; i++) {
+            dp[i][i] = true;
+        }
+        for (int d = 1; d < N; d++) {
+            for (int l = 0; l < N - d; l++) {
+                dp[l][d + l] = chArr[l] == chArr[l + d] && (d == 1 || dp[l + 1][l + d - 1]);
+            }
+        }
+        boolean[] visited = new boolean[N];
+        Queue<int[]> queue = new LinkedList<>();
+        queue.offer(new int[] { 0, 0 });
+        while (!queue.isEmpty()) {
+            int[] head = queue.poll();
+            if (head[0] == N) {
+                return head[1] - 1;
+            }
+            for (int i = head[0]; i < N; i++) {
+                if (!visited[i] && dp[head[0]][i]) {
+                    visited[i] = true;
+                    queue.offer(new int[] { i + 1, head[1] + 1 });
+                }
+            }
+        }
+        throw null;
     }
 }
