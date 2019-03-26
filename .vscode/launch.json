@@ -1,15 +1,10 @@
 {
-<<<<<<< HEAD
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Launch",
-=======
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
             "type": "java",
             "name": "Debug (Launch)",
@@ -17,29 +12,25 @@
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopOnEntry": false,
-            "mainClass": "",
+            "mainClass": "binary_search",
             "args": ""
         },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-test",
->>>>>>> a07c39f2ecee05469bc7938cd2530a4d83ca0284
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopOnEntry": false,
-            "mainClass": "test",
-            "args": ""
-        },
-<<<<<<< HEAD
-=======
-        {
-            "type": "java",
-            "name": "Debug (Attach)",
-            "request": "attach",
-            "hostName": "localhost",
-            "port": "<debug port of remote debuggee>"
-        }
->>>>>>> a07c39f2ecee05469bc7938cd2530a4d83ca0284
+        // {
+        //     "type": "java",
+        //     "name": "Debug (Launch)-test",
+        //     "request": "launch",
+        //     "cwd": "${workspaceFolder}",
+        //     "console": "internalConsole",
+        //     "stopOnEntry": false,
+        //     "mainClass": "test",
+        //     "args": ""
+        // },
+        // {
+        //     "type": "java",
+        //     "name": "Debug (Attach)",
+        //     "request": "attach",
+        //     "hostName": "localhost",
+        //     "port": "<debug port of remote debuggee>"
+        // }
     ]
 }
