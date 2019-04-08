@@ -1,3 +1,6 @@
+import java.util.Deque;
+import java.util.LinkedList;
+
 class Solution {
     boolean[][] rows = new boolean[9][9];
     boolean[][] cols = new boolean[9][9];
@@ -11,6 +14,8 @@ class Solution {
                 pre = i;
             }
         }
+        Deque<Integer> D = new LinkedList<>();
+        D.p
     }
 
     public void set(int rc, int num, boolean add) {
